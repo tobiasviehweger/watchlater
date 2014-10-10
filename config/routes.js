@@ -32,9 +32,6 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/': {
-    view: 'homepage'
-  },
 
   /***************************************************************************
   *                                                                          *
@@ -45,5 +42,29 @@ module.exports.routes = {
   * for configuration options and examples.                                  *
   *                                                                          *
   ***************************************************************************/
+  'get /api/auth/login': {
+      controller: 'auth',
+      action: 'login'
+  },
+  
+  'get /api/auth/oauth2callback': {
+      controller: 'auth',
+      action: 'oauth2callback'
+  },
 
+  'get /api/user/channelInfo': {
+      controller: 'user',
+      action: 'getChannelInfo'
+  },
+
+  'get /api/user/playlists': {
+      controller: 'user',
+      action: 'getPlaylists'
+  },
+
+  'get /api/user/subscriptions': {
+      controller: 'user',
+      action: 'getSubscriptions'
+  }
+  
 };
